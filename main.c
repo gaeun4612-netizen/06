@@ -3,17 +3,16 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-void printstar(int N)
+void func(void)
 {
-	int i;
-	for (i=0;i<N;i++)
-	 printf("*");
+	int x;
+	printf("func x is at %p\n", &x);
 }
 
 int main(int argc, char *argv[]) {
-	int i;
-	printstar(10);
-	printstar(10);
-	printstar(10);
+	int x;
+	
+	printf("main x is at %p\n", &x);
+	func();
 	return 0;
 }
